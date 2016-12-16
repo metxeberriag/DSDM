@@ -1,0 +1,29 @@
+grammar politicianBiDsl.PBiDsl with org.eclipse.xtext.common.Terminals
+
+generate pBiDsl "http://www.PBiDsl.politicianBiDsl"
+
+City:
+    'City' name=STRING '{'
+        ('parties' '{' parties+=Party ( "," parties+=Party)* '}' )?
+        'indeps' '{' indeps+=Politician ( "," indeps+=Politician)* '}'
+    '}';
+
+Party:
+    'Party' name=STRING '{'
+        'acronym' acronym=STRING
+        'president' president=[Politician]
+        'pols' '[' pols+=Politician (',' pols+=Politician)* ']'
+    '}';
+
+Politician:
+    Politician_Impl | PublicOffice;
+
+Politician_Impl returns Politician:
+    'Politician'
+        name=STRING '{' 'age' age=INT 'sex' sex=STRING '}';
+
+PublicOffice:
+    'PublicOffice'
+        name=STRING '{' 'age' age=INT 'sex' sex=STRING 'instName' instName=STRING '}';
+
+	

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/politicianBiDsl/src-gen" editDirectory="/politicianBiDsl.edit/src"
+    editorDirectory="/politicianBiDsl.editor/src" modelPluginID="politicianBiDsl"
+    forceOverwrite="true" modelName="PBiDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="politicianBiDsl.edit"
+    editorPluginID="politicianBiDsl.editor" runtimeVersion="2.10">
+  <genPackages prefix="PBiDsl" basePackage="politicianBiDsl" disposableProviderFactory="true"
+      fileExtensions="pbd" ecorePackage="PBiDsl.ecore#/">
+    <genClasses ecoreClass="PBiDsl.ecore#//City">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBiDsl.ecore#//City/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PBiDsl.ecore#//City/parties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PBiDsl.ecore#//City/indeps"/>
+    </genClasses>
+    <genClasses ecoreClass="PBiDsl.ecore#//Party">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBiDsl.ecore#//Party/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBiDsl.ecore#//Party/acronym"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PBiDsl.ecore#//Party/president"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PBiDsl.ecore#//Party/pols"/>
+    </genClasses>
+    <genClasses ecoreClass="PBiDsl.ecore#//Politician">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBiDsl.ecore#//Politician/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBiDsl.ecore#//Politician/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBiDsl.ecore#//Politician/sex"/>
+    </genClasses>
+    <genClasses ecoreClass="PBiDsl.ecore#//PublicOffice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBiDsl.ecore#//PublicOffice/instName"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="politicianBiDsl.sdk"
+	label="PBiDsl SDK Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="politicianBiDsl"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="politicianBiDsl.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>
